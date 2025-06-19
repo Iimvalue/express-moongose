@@ -41,7 +41,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 // Basic error handling middleware
-app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+app.use((err: Error, req: Request, res: Response) => {
   logger.error('Error:', err.message);
   res
     .status(INTERNAL_SERVER_ERROR)
